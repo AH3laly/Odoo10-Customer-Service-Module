@@ -1,0 +1,144 @@
+<!--
+# Author: Abdelrahman Mohamed
+# Contact: < Abdo.Tasks@Gmail.Com , https://Github.com/abd0m0hamed >
+# Project: Odoo 10 Customer Service. 
+# Description: Odoo 10 Customer Service Module.
+# License: Science not for Monopoly.
+-->
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="cs.list">
+      <field name="name">cs list</field>
+      <field name="model">cs.cs</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+    <!-- actions opening views on models -->
+    
+        <record model="ir.actions.act_window" id="cs_customers_list">
+            <field name="name">Customers</field>
+            <field name="res_model">cs.customer</field>
+            <field name="view_type">form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first customer</p>
+            </field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="cs_tasks_list">
+            <field name="name">Tasks</field>
+            <field name="res_model">cs.task</field>
+            <field name="view_type">form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first customer</p>
+            </field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="cs_issues_list">
+            <field name="name">Issues</field>
+            <field name="res_model">cs.issue</field>
+            <field name="view_type">form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first customer</p>
+            </field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        
+        <record model="ir.ui.view" id="customer_view_tree">
+            <field name="name">Generic Customer List</field>
+            <field name="model">cs.customer</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <!-- view content: <form>, <tree>, <graph>, ... -->
+                <tree string="Customer list">
+                    <field name="name"/>
+                    <field name="religion"/>
+                    <!-- <field name="gender"/> -->
+                    <field name="company"/>
+                    <field name="job_title"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="customer_view_form1">
+            <field name="name">Generic Customer Item 1</field>
+            <field name="model">cs.customer</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <form string="Idea form">
+                    <group colspan="4">
+                    
+                        <group colspan="2" col="2">
+                            <separator string="General stuff" colspan="2"/>
+                            <field name="name"/>
+                            <field name="company"/>
+                        </group>
+    
+                        <group colspan="2" col="2">
+                            <separator string="Dates" colspan="2"/>
+                            <!-- <field name="birth_date"/> -->
+                            <field name="create_date" readonly="1"/>
+                        </group>
+                        
+                        <notebook colspan="4">
+                            <page string="Notes">
+                                <!-- <field name="notes" nolabel="1"/> -->
+                            </page>
+                            <page string="About">
+                                    This is an example of notebooks
+                            </page>
+                        </notebook>
+                        
+                        
+                    </group>
+                    
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="customer_view_form2">
+            <field name="name">Generic Customer Item 2</field>
+            <field name="model">cs.customer</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="html">
+                <form string="Idea Form">
+                    <header>
+                        <button string="Confirm" type="object" name="action_confirm" states="draft" class="oe_highlight" />
+                        <button string="Mark as done" type="object" name="action_done" states="confirmed" class="oe_highlight"/>
+                        <button string="Reset to draft" type="object" name="action_draft" states="confirmed,done" />
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only" string="Idea Name" />
+                            <h1><field name="name" /></h1>
+                        </div>
+                        <separator string="General" colspan="2" />
+                        <group colspan="2" col="2">
+                            <field name="job_title" placeholder="Idea description..." />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <menuitem id="cs_root" name="Customer Service" sequence="0"/>
+        <menuitem id="cs_customers" parent="cs_root" name="Customers" sequence="0" action="cs_customers_list"/>
+        <menuitem id="cs_customer_item1" parent="cs_root" name="Customer Item 1" sequence="0" action="customer_item1"/>
+        <menuitem id="cs_customer_item2" parent="cs_root" name="Customer Item 2" sequence="0" action="customer_item2"/>
+        <menuitem id="cs_tasks" parent="cs_root" name="Tasks" sequence="1" action="cs_tasks_list"/>
+        <menuitem id="cs_issues" parent="cs_root" name="Issues" sequence="2" action="cs_issues_list"/>
+        <menuitem id="cs_root_generic" name="Generic Forms" sequence="0"/>
+        <menuitem id="cs_customers_generic" parent="cs_root_generic" name="Generic Customers" sequence="0" action="customer_view_tree"/>
+  </data>
+</odoo>

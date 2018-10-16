@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_cs_customer,cs.customer,model_cs_customer,,1,0,0,0
+access_cs_team,cs.team,model_cs_team,,1,0,0,0
+access_cs_issue,cs.issue,model_cs_issue,,1,0,0,0
+access_cs_task,cs.task,model_cs_task,,1,0,0,0
+access_cs_customer_phone,cs.customer.phone,model_cs_customer_phone,,1,0,0,0
+access_cs_customer_email,cs.customer.email,model_cs_customer_email,,1,0,0,0
+

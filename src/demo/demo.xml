@@ -1,0 +1,37 @@
+<!--
+# Author: Abdelrahman Mohamed
+# Contact: < Abdo.Tasks@Gmail.Com , https://Github.com/abd0m0hamed >
+# Project: Odoo 10 Customer Service. 
+# Description: Odoo 10 Customer Service Module.
+# License: Science not for Monopoly.
+-->
+<odoo>
+    <data>
+        <!--  -->
+        <!--   <record id="object0" model="cs.cs"> -->
+        <!--     <field name="name">Object 0</field> -->
+        <!--     <field name="value">0</field> -->
+        <!--   </record> -->
+        <!--  -->
+        <!--   <record id="object1" model="cs.cs"> -->
+        <!--     <field name="name">Object 1</field> -->
+        <!--     <field name="value">10</field> -->
+        <!--   </record> -->
+        <!--  -->
+        <!--   <record id="object2" model="cs.cs"> -->
+        <!--     <field name="name">Object 2</field> -->
+        <!--     <field name="value">20</field> -->
+        <!--   </record> -->
+        <!--  -->
+        <!--   <record id="object3" model="cs.cs"> -->
+        <!--     <field name="name">Object 3</field> -->
+        <!--     <field name="value">30</field> -->
+        <!--   </record> -->
+        <!--  -->
+        <!--   <record id="object4" model="cs.cs"> -->
+        <!--     <field name="name">Object 4</field> -->
+        <!--     <field name="value">40</field> -->
+        <!--   </record> -->
+        <!--  -->
+    </data>
+</odoo>
