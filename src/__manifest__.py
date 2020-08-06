@@ -1,5 +1,5 @@
-# Author: Abdelrahman Mohamed
-# Contact: < Abdo.Tasks@Gmail.Com , https://Github.com/abd0m0hamed >
+# Author: Abdelrahman Helaly
+# Contact: < AH3laly@gmail.com , https://Github.com/AH3laly >
 # Project: Odoo 10 Customer Service. 
 # Description: Odoo 10 Customer Service Module.
 # License: Science not for Monopoly.
@@ -12,11 +12,11 @@
         Testing customer service module""",
 
     'description': """
-        It's a customer service module created by Abdelrahman Mohamed to test creating Odoo Module
+        It's a customer service module created by Abdelrahman Helaly to test creating Odoo Module
     """,
 
-    'author': "Abdelrahman Mohamed",
-    'website': "https://github.com/abd0m0hamed",
+    'author': "Abdelrahman Helaly",
+    'website': "https://Github.com/AH3laly",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/master/odoo/addons/base/module/module_data.xml
